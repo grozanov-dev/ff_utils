@@ -48,8 +48,13 @@ Usage:
 ```
 $ ./ff_stabilize <input_file> <output_file>
 ```
-NOTE: you must get the release of ffmpeg built with VidStab
+
+# NOTE
+
+You must get the release of ffmpeg built with VidStab
 
 More info: https://gist.github.com/hlorand/e5012fa315dcfe358008cf1b4611c7e0
 
 # Enjoy!
+
+Example: https://github.com/grozanov-dev/ff_utils
