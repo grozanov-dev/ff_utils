@@ -40,7 +40,7 @@ Usage:
 ```
 $ ./ff_sidebyside <video_1> <video_2>
 ```
-# ff_stab
+# ff_stabilize
 
 Stabilize video with VidStab lib and converts it to ProRes LT
 
