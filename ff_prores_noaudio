@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Encodes video to ProRes LT 422 and removes audio track
+# Usage:
+#       $ ./ff_prores_noaudio <input_file> <output_file>
+
+ffmpeg -y -i "$1" -qscale:v 10 -profile:v 1 -c:v prores_ks -pix_fmt yuv422p10le -an "$2"

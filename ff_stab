@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Stabilize video with VidStab lib and converts it to ProRes LT
+# Usage:
+#       $ ./ff_stabilize <input_file> <output_file>
+#
+# NOTE: you must get the release of ffmpeg built with VidStab
+# More info: https://gist.github.com/hlorand/e5012fa315dcfe358008cf1b4611c7e0
+
+
+ffmpeg -i "$1" -vf vidstabdetect=shakiness=4 -f null -
+
+ffmpeg -y -i "$1" -qscale:v 10 -profile:v 1 -c:v prores_ks -pix_fmt yuv422p10le \
+    -vf vidstabtransform=smoothing=12:zoom=5:input="transforms.trf" \
+    -c:a copy "$2"
+
+rm transforms.trf
