@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Encodes video to h264 for Youtube
+# Grades and encodes video to h264 for Youtube
 # Usage:
 #       $ ./ff_264 <input_file> <lut_file> <output_file>
 
