@@ -36,7 +36,7 @@ $ ./ff_monitor <video_file>
 ```
 # ff_prores_noaudio
 
-Encodes video to ProRes LT 422, denoise and removes audio track
+Encodes video to ProRes LT 422 and removes audio track
 
 Usage:
 ```
