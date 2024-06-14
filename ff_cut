@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Cut from timestemp
+# Usage:
+#       $ ./ff_cut <input_file> <from_timestamp> <duration> <output_file>
+#
+# Timestamp & duration format: HH:MM:SS
+
+ffmpeg -y -ss $2 -t $3 -i $1 -c copy $4

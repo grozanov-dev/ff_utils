@@ -16,6 +16,16 @@ Usage:
 ```
 $ ./ff_265_aac <input_file> <lut_file> <output_file>
 ```
+# ff_cut
+
+Cut from timestemp
+
+Usage:
+```
+$ ./ff_cut <input_file> <from_timestamp> <duration> <output_file>
+```
+Timestamp & duration format: HH:MM:SS
+
 # ff_monitor
 
 Plays video file with realtime timestamp
