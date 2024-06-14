@@ -4,4 +4,4 @@
 # Usage:
 #       $ ./ff_264 <input_file> <lut_file> <output_file>
 
-ffmpeg -y -i "$1" -c:v libx264 -crf 16 -preset fast -profile:v main -vf lut3d=file="$2",format=yuv420p -c:a copy "$3"
+ffmpeg -y -i "$1" -c:v libx264 -crf 15 -preset fast -profile:v main -vf lut3d=file="$2",format=yuv420p -c:a copy "$3"
