@@ -52,7 +52,7 @@ $ ./ff_sidebyside <video_1> <video_2>
 ```
 # ff_stabilize
 
-Stabilize video with VidStab lib and converts it to ProRes LT
+Stabilize video with VidStab lib, denoise and converts it to ProRes LT
 
 Usage:
 ```
