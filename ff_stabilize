@@ -10,8 +10,8 @@
 
 ffmpeg -i "$1" -vf vidstabdetect=shakiness=4 -f null -
 
-ffmpeg -y -i "$1" -qscale:v 10 -profile:v 1 -c:v prores_ks -pix_fmt yuv422p10le \
-    -vf vidstabtransform=smoothing=12:zoom=5:input="transforms.trf" \
+ffmpeg -y -i "$1" -qscale:v 10 -profile:v 1 -c:v prores_ks \
+    -vf vidstabtransform=smoothing=12:zoom=10:input="transforms.trf" \
     -c:a copy "$2"
 
 rm transforms.trf

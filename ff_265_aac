@@ -4,4 +4,4 @@
 # Usage:
 #       $ ./ff_265_aac <input_file> <lut_file> <output_file>
 
-ffmpeg -y -i "$1" -b:v 8M -c:v libx265 -pix_fmt yuv420p -vf atadenoise,lut3d=file="$2" -c:a aac -b:a 192k "$3"
+ffmpeg -y -i "$1" -b:v 8M -c:v libx265 -pix_fmt yuv420p -vf lut3d=file="$2" -c:a aac -b:a 192k "$3"
