@@ -2,7 +2,7 @@ Some helpful bash scripts to manipulate video with ffmpeg: encode, stabilize, pl
 
 # ff_264
 
-Encodes video to h264 with denoise and grading LUT applied for Youtube
+Encodes video to h264 for Youtube
 
 Usage:
 ```
@@ -10,7 +10,7 @@ $ ./ff_264 <input_file> <lut_file> <output_file>
 ```
 # ff_265_aac
 
-Encodes video to h265 with denoise, grading LUT and AAC audio encoding for Youtube
+Encodes video to h265 with AAC audio for Youtube
 
 Usage:
 ```

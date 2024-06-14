@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Encodes video to h265 with denoise, grading LUT and AAC audio encoding for Youtube
+# Encodes video to h265 with AAC audio for Youtube
 # Usage:
 #       $ ./ff_265_aac <input_file> <lut_file> <output_file>
 

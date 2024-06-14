@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Encodes video to h264 with denoise and grading LUT applied for Youtube
+# Encodes video to h264 for Youtube
 # Usage:
 #       $ ./ff_264 <input_file> <lut_file> <output_file>
 
