@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Synchronize audio and video
+# Usage:
+#       ./ff_sync <audio_file> <shift_seconds> <video_file> <output_file>
+
+tmp_wav="/tmp/ffmpeg.$$.$1.sync.wav"
+
+ffmpeg -ss $2 -i "$1" -c copy $tmp_wav
+
+ffmpeg -y -i "$3" -i $tmp_wav -map 0:v -map 1:a -c copy "$4"
+
+rm $tmp_wav

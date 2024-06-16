@@ -12,7 +12,7 @@ trf="/tmp/ffmpeg.$$.$1.transforms.trf"
 ffmpeg -i "$1" -vf vidstabdetect=result=$trf -f null -
 
 ffmpeg -y -i "$1" -qscale:v 10 -profile:v 1 -c:v prores_ks \
-    -vf atadenoise,vidstabtransform=smoothing=12:zoom=5:input=$trf:interpol=bicubic \
+    -vf vidstabtransform=smoothing=5:zoom=5:input=$trf:interpol=bicubic \
     -c:a copy "$2"
 
 rm $trf

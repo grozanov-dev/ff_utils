@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Detects the offset of clap peak in audio
+# Usage:
+#       $ ./ff_peak_detection <audio_file> <seconds> <peak_value>
+#
+# <seconds>       - timestamp in format HH.MM.SS (ebur128 will detects clap in first hours, minutes and seconds of <audio_file>)
+# <peak_value>    - value of true peak in dBTP (e.g. from ff_loudness)
+
+ffmpeg -to $2 -nostats -i $1 -filter_complex ebur128=peak=true -f null - 2>&1 | grep "FTPK:\s*$3" | awk '{print "True Peak at", $5, "s"}'
