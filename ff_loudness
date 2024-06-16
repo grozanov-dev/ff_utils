@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Detects true peak value from given audio
-# Usage:
-#       ./$ ff_loundess <audio_file> <seconds>
-#
-# <seconds> - timestamp in format HH.MM.SS (ebur128 will detects clap in first hours, minutes and seconds of <audio_file>)
-
-ffmpeg -to $2 -i "$1" -af loudnorm=print_format=summary -f null - 2>&1 | awk '/Input True Peak:/{print $0}'
